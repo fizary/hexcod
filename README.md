@@ -22,5 +22,3 @@ while (substream.remaining > 0)
 // Int16Array [1092, 13905]
 // Int16Array [8540, 17681]
 ```
-
-```
