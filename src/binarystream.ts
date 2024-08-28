@@ -1,7 +1,7 @@
 import { typedArrayMap, typecastMap } from "./utils/maps.ts";
 import type { Source, DataType, PrimitiveValue, TypedArray } from "./types.ts";
 
-type Options = {
+export type StreamOptions = {
     byteOffset?: number;
     byteLength?: number;
 };
@@ -12,7 +12,7 @@ export class BinaryStream {
     offset: number;
     remaining: number;
 
-    constructor(source: Source, options: Options = {}) {
+    constructor(source: Source, options: StreamOptions = {}) {
         if ("buffer" in source) {
             this.buffer = source.buffer;
             options.byteOffset ??= source.byteOffset;
