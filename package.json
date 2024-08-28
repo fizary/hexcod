@@ -10,7 +10,7 @@
     ],
     "exports": {
         ".": {
-            "types": "./lib/hexcod.d.ts",
+            "types": "./lib/index.d.ts",
             "import": "./lib/hexcod.js"
         }
     },
