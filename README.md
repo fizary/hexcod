@@ -34,6 +34,8 @@ while (substream.remaining > 0)
 
 This package is not published in any registry and requires manual installation.
 
+### 1. Clone and compile source
+
 ```bash
 # Clone repository
 git clone https://github.com/fizary/hexcod.git
@@ -47,15 +49,35 @@ npm run build
 
 # Generate type declarations
 npm run types:emit
-
-# Create package tarball to be installed in your project
-npm pack
 ```
 
-Last step is to move created tarball into your projects root directory and install it.
+### 2. Installation from local source
+
+There are couple ways to install dependencies from local source.
+
+#### Install from directory (recommended)
 
 ```bash
-npm i hexcod-0.0.0.tgz
+# Use `file:` protocol with path to directory you want to install, eg.
+npm i file:../hexcod
+```
+
+**Important!** Make sure directory you want to install is located outside of your project's root directory to avoid installing and hoisting it's dependencies to your project's node_modules.
+
+#### Install from tarball
+
+```bash
+# Run this command in library's root directory to create tarball
+npm pack
+
+# You can move this tarball to any location, in this example we will move it to parent directory
+mv hexcod-0.0.0.tgz ../hexcod-0.0.0.tgz
+
+# Then we go to our project's root directory
+cd ../my-project
+
+# And finally install the dependency
+npm i ../hexcod-0.0.0.tgz
 ```
 
 ## API
