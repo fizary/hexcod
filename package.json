@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "name": "hexcod",
+    "version": "0.0.0",
+    "description": "Fast and easy to use binary reader.",
+    "license": "MIT",
+    "type": "module",
+    "files": [
+        "/lib"
+    ],
+    "exports": {
+        ".": {
+            "types": "./lib/hexcod.d.ts",
+            "import": "./lib/hexcod.js"
+        }
+    },
+    "scripts": {
+        "build": "vite build",
+        "watch": "vite build --watch",
+        "typecheck": "tsc",
+        "lint": "eslint ./src"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.22.0",
+        "eslint": "^9.22.0",
+        "typescript": "^5.8.2",
+        "typescript-eslint": "^8.26.1",
+        "vite": "^6.2.1",
+        "vite-plugin-dts": "^4.5.3"
+    }
+}
