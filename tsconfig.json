@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
         /* Language and Environment */
-        "target": "ES2020",
-        "lib": ["ES2020", "DOM"],
+        "target": "esnext",
+        "lib": ["ESNext", "DOM"],
         "moduleDetection": "force",
 
         /* Modules */
-        "rootDir": "./src",
+        "rootDir": ".",
         "module": "preserve",
         "moduleResolution": "bundler",
         "resolveJsonModule": true,
@@ -27,5 +27,5 @@
         /* Completeness */
         "skipLibCheck": true
     },
-    "include": ["src"]
+    "include": ["src", "tests"]
 }

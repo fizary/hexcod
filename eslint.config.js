@@ -9,4 +9,7 @@ export default tseslint.config(
             reportUnusedDisableDirectives: true,
         },
     },
+    {
+        ignores: ["lib/**"],
+    },
 );
